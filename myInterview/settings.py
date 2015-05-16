@@ -39,7 +39,9 @@ DEFAULT_APPS = (
     'django.contrib.staticfiles',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+              'mysearch',
+              )
 
 THIRD_PARTY_APPS = ()
 
