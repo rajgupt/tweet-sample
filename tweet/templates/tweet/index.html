@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1>User List</h1>
+<p>
+{% if user_list %}
+    <table border="1">
+    <tr>
+        <td><b>User</b></td>
+        <td><b>Number of messages</b></td>
+    </tr>
+    {% for user in user_list %}
+        <tr>
+            <td><a href="/tweet/{{ user.id }}/">{{ user.value }}</a></td>
+            <td align="center">{{ user.message_set.count }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No users are available.</p>
+{% endif %}
+</p>
+</body>
+</html>

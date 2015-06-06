@@ -1,0 +1,23 @@
+<html>
+<body>
+{% if handle %}
+<h1>{{ handle.value }} details</h1>
+<p>
+    <table border="1">
+    <tr>
+        <td><b>Message</b></td>
+        <td><b>Published on</b></td>
+    </tr>
+    {% for msg in handle.message_set.all %}
+        <tr>
+        <td>{{ msg.value }}</td>
+        <td>{{ msg.pub_date }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No messages are available.</p>
+</p>
+{% endif %}
+</body>
+</html>
