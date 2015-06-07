@@ -20,5 +20,7 @@ from tweet import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.IndexView.as_view(), name = 'index'),
+    url(r'^tweet/new/$', views.CreateView.as_view(), name = 'new'),
     url(r'^tweet/(?P<pk>[0-9]+)/$', views.UserView.as_view(), name = 'user')
+    
 ]
